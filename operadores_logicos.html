@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>operadores logicos</title>
+
+    <script>
+        var nota1 = parseFloat(prompt('digite a primeira nota :'));
+        var nota2 = parseFloat(prompt('digite a segunda  nota :'));
+        var faltas = parseInt(prompt('digite o numero de faltas do aluno :'));
+        var media = 7;
+        var max_faltas = 10;
+
+        res = (nota1 + nota2)/2;
+        document.write('A media do aluno é:' + res + '</br>');
+        document.write('maximo de faltas permitidas :' + max_faltas + '</br>');
+        document.write('faltas do aluno : ' + faltas + '</br>');
+
+        if(res >= media && faltas <= max_faltas){
+            document.write('Ele(a) está aprovado');
+        }else{
+            document.write('</br>' + 'Ele(a) está reprovado');
+        }
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

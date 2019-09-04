@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IMC</title>
+
+    <script>
+        var nome = prompt('digite seu nome :');
+        var peso = prompt('digite seu peso :');
+        var altura = prompt('digite sua altura em centimetros :');
+
+        parseFloat(altura);
+        parseFloat(peso);
+       altura = altura/100;
+
+         var resultado =  peso/(altura * altura);
+
+        if (resultado <= 16){
+            imc = 'Baixo peso muito grave!';
+        } else if (resultado >= 16 && resultado <= 16.99) {
+            imc = 'Baixo peso grave';
+        }else if (resultado >=17 && resultado <= 18.49){
+            imc = 'Baixo peso';
+        }else if (resultado >= 18.50 && resultado <= 24.99){
+            imc = 'está no peso normal';
+        }else if ( resultado >= 25 && resultado <= 29.99){
+            imc = 'Está no sobre peso';
+        }else if (resultado <= 30 && resultado <=34.99) {
+            imc = 'Obsidade 1 ';
+        }else if (resultado <= 35 && resultado <=39.99){
+            imc = 'Obsidade 2 ';
+        }else{
+             imc = 'obsidade 3';
+        }
+    document.write( nome + ' seu IMC e :  ' + resultado + 'é você se classifica como :  ' + imc);
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
