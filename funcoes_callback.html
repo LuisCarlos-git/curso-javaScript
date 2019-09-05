@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funções callback</title>
+    <script>
+        function recuperarArtigo (id, callbackSucesso, callbackErro){
+            if (true){
+                callbackSucesso ('funções de callback em JS', 'As funções de callback são muito usadas.... ')
+            }else {
+                callbackErro ('Ocorreu um erro !!!')
+            }
+        }
+
+        var callbackSucesso = function (titulo, descricao){
+            document.write('<h1>'+ 'titulo' + '</h1>')
+            document.write('<hr/>')
+            document.write('<p>' + 'descrição' + '</p>')
+
+        }
+        var callbackErro = function (erro){
+            document.write('Ocorreu um pequeno erro!')
+        }
+        recuperarArtigo(1,callbackSucesso, callbackErro)
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
