@@ -4,25 +4,55 @@
     <meta charset="UTF-8">
     <title>funções callback</title>
     <script>
-        function recuperarArtigo (id, callbackSucesso, callbackErro){
-            if (true){
-                callbackSucesso ('funções de callback em JS', 'As funções de callback são muito usadas.... ')
-            }else {
-                callbackErro ('Ocorreu um erro !!!')
+        // function recuperarArtigo (id, callbackSucesso, callbackErro){
+        //     if (false){
+        //         callbackSucesso ('funções de callback em JS', 'As funções de callback são muito usadas.... ')
+        //     }else {
+        //         callbackErro ('Ocorreu um erro !!!')
+        //     }
+        // }
+        //
+        // var callbackSucesso = function (titulo, descricao){
+        //     document.write('<h1>'+ 'titulo' + '</h1>')
+        //     document.write('<hr/>')
+        //     document.write('<p>' + 'descrição' + '</p>')
+        //
+        // }
+        // var callbackErro = function (erro){
+        //     document.write('Ocorreu um pequeno erro!')
+        // }
+        // recuperarArtigo(1,callbackSucesso, callbackErro)
+
+
+        var callbackConsole = function () {
+            console.log('Terminou');
+        };
+        var callbackAlert = function() {
+            alert('Terminou');
+        };
+        var printaResposta = function(resposta) {
+            alert(resposta);
+        };
+        var joganatela = function(resposta) {
+            document.write('<h1>'+ 'resposta' + '</h1>')
+        };
+        function executaLoop(tam, callback) {
+            for(let i=0; i<tam; i++) {
+                console.log(i);
             }
+            callback()
         }
 
-        var callbackSucesso = function (titulo, descricao){
-            document.write('<h1>'+ 'titulo' + '</h1>')
-            document.write('<hr/>')
-            document.write('<p>' + 'descrição' + '</p>')
+        // executaLoop(10000, callbackConsole);
+        // executaLoop(100, callbackAlert);
 
+        function req(callback) {
+            var resposta = 'servidor respondeu';
+            setTimeout(() => callback(resposta), 3000);
         }
-        var callbackErro = function (erro){
-            document.write('Ocorreu um pequeno erro!')
-        }
-        recuperarArtigo(1,callbackSucesso, callbackErro)
-
+        console.log('Fazendo requisicao no servidor');
+        req(printaResposta);
+        req(joganatela);
     </script>
 
 </head>
