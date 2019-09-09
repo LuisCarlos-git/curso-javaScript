@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>desafio 4 </title>
+
+    <script>
+        var num1 = parseFloat(prompt('digite o primeiro valor :'));
+        var num2 = parseFloat(prompt('digite o segundo valor :'));
+        var operacao = prompt('digite a operação desejada :');
+
+        function calculo (num1, num2, operacao){
+            var resultado = 0;
+
+            if (operacao == 'soma'){
+                resultado  = num1 + num2;
+            }else if (operacao == 'subtração'){
+                resultado = num1 - num2;
+            }else if (operacao == 'multiplicação'){
+                resultado = num1 * num2;
+            }else if (operacao == 'divisão'){
+                resultado = num1 / num2;
+            }
+            return resultado;
+        }
+
+
+        document.write('O resultado da operação e : ' + calculo(num1, num2, operacao))
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
