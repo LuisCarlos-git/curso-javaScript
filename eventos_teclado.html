@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>teclados</title>
+
+    <script>
+
+        function acao (){
+            alert('ola mundo perdido ')
+        }
+
+
+    </script>
+</head>
+<body>
+<!--<label>onkeydown:</label>-->
+<!--<input onkeydown="acao()" type="text"> -- ação executada antes da tecla pressionada aparecer-->
+
+
+<!--<label>onkeyup:</label>-->
+<!--<input onkeyup="acao()" type="text"> -- ação e executada depois que a tecla precionada aparecer-->
+
+
+<label>onkeypress:</label>
+<input onkeypress="acao()" type="text"><!--mesma coisa do onkeydown porem nao funciona com alt, ctrl-->
+
+</body>
+</html>

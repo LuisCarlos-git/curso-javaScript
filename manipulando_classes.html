@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>manipulando classes</title>
+    <style>
+        .estilo1 {
+            width: 200px;
+            height: 200px;
+            background: aquamarine;
+        }
+        .estilo2{
+            color: #fff;
+            width: 100px;
+            height: 100px;
+            background: #000000;
+        }
+
+    </style>
+
+    <script>
+
+       function  modificaClasse(){
+           document.getElementById('trocaClasse').className = 'estilo2';
+       }
+
+    </script>
+
+</head>
+    <body>
+
+        <div id="trocaClasse" class="estilo1"> modifica classe </div>
+        <hr />
+
+        <button type="button" onclick="modificaClasse()"> trocar de estilo</button>
+
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> desafio 5 </title>
+
+    <script>
+
+        function focoElemento(){
+            document.getElementById('campo').style.borderColor = "yellow"
+
+        }
+        function validaCampo(){
+            let alteraCor = document.getElementById('campo').value;
+            if (alteraCor.length < 3){
+                document.getElementById('campo').style.borderColor = "red";
+            }else {
+                document.getElementById('campo').style.borderColor = "green";
+            }
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+<input type="text" id="campo" onfocus="focoElemento()" onblur="validaCampo()">
+
+</body>
+</html>
