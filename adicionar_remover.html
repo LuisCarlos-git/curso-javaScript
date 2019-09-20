@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adicionando elementos no Array</title>
+    <script>
+
+        var lista_jogos = Array();
+
+        lista_jogos ['RPG'] = Array('The Witcher','Sekiro');
+        lista_jogos ['BR'] = Array('Free fire', 'Cyber Hunter');
+
+        lista_jogos['RPG'].push('Darksiders');//adicionar item no final da lista usar o push
+        lista_jogos['BR'].unshift('PUBG');// adicionar no começo da lista utilizar o unshift
+
+        //para excluir um elemento do começo do Array (excluiu darksiders)
+        lista_jogos['RPG'].pop();
+
+        //excluir um elemento no final do Array ( excluiu PUBG )
+        lista_jogos['BR'].shift();
+
+
+        console.log(lista_jogos);
+
+
+
+
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>
